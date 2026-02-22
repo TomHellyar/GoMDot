@@ -2,15 +2,14 @@ extends Node
 
 var atom_scene = preload("res://scenes/atom.tscn")
 
-func vis(elements,coords,element_data):
+func vis(elements,coords,frame_ind,element_data):
 	var colours: Array = []
 	var radii: Array = []
 	var sphere_data: Array = []
 	sphere_data=set_spheres(elements,element_data) # Set colours and radii for each atom
 	
 	for i in range(len(elements)):
-		inst(coords[i],sphere_data[i])
-		
+		inst(coords[i],sphere_data[i])	
 
 func set_spheres(elements,element_data) -> Array:
 	var atomic_labels: Array = []
@@ -18,7 +17,7 @@ func set_spheres(elements,element_data) -> Array:
 	var atomic_radii: Array = []
 	var sphere_data: Array = []
 	var label_index : int
-	
+
 	for i in element_data:
 		atomic_labels.append(i[2])
 		atomic_colours.append(i[11])
@@ -35,10 +34,18 @@ func inst(coords,sphere_data) -> void:
 	var instance = atom_scene.instantiate()
 	
 	add_child(instance)
-	
 	pos=Vector3(coords[0],coords[1],coords[2])
 	instance.position = pos
 	
 	instance.build_sphere(sphere_data[0],sphere_data[1])
+	
+func reset() -> void:
+	var visual_nodes = get_tree().get_nodes_in_group("visual")
+	
+	if len(visual_nodes) > 1:
+		for i in visual_nodes:
+			i.queue_free()
+	else:
+		visual_nodes.queue_free()
 	
 	

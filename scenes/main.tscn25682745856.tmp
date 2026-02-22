@@ -18,7 +18,7 @@ script = ExtResource("3_sugp2")
 script = ExtResource("4_jyhfs")
 
 [node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.879175, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
 [node name="CameraController" type="SpringArm3D" parent="CameraPivot"]
 

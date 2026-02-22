@@ -81,7 +81,7 @@ AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,Numberof
 79,Gold,Au,196.967,118,79,79,6,11,1.8,2.54,gold
 80,Mercury,Hg,200.59,121,80,80,6,12,1.8,2,
 81,Thallium,Tl,204.383,123,81,81,6,13,2.1,2.04,
-82,Lead,Pb,207.2,125,82,82,6,14,1.8,2.33,
+82,Lead,Pb,207.2,125,82,82,6,14,1.8,2.33,darkgrey
 83,Bismuth,Bi,208.98,126,83,83,6,15,1.6,2.02,
 84,Polonium,Po,210,126,84,84,6,16,1.5,2,
 85,Astatine,At,210,125,85,85,6,17,1.4,2.2,

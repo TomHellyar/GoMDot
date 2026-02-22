@@ -10,12 +10,12 @@ roughness = 0.1
 [sub_resource type="SphereMesh" id="SphereMesh_70ww4"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ea5g2")
+radius = 1.0
+height = 2.0
 
-[node name="Atom" type="StaticBody3D"]
+[node name="Atom" type="StaticBody3D" groups=["visual"]]
 script = ExtResource("1_70ww4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_70ww4")
-skeleton = NodePath("../CollisionShape3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+skeleton = NodePath("")
